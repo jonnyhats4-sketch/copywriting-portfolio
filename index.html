@@ -106,7 +106,7 @@ nav a:hover::after,nav a.on::after{transform:scaleX(1)}
 .filters button[aria-pressed=true]{color:var(--fg)}.filters button[aria-pressed=true]::after{transform:scaleX(1)}
 .filters button:hover{color:var(--fg)}
 .sg{display:grid;place-items:center;min-height:0}
-.ring{--S:min(94vw,calc(100svh - 150px),820px);--mx:0;--my:0;position:relative;width:var(--S);height:var(--S);grid-area:1/1;touch-action:pan-y;user-select:none}
+.ring{--S:min(94vw,calc(100svh - 225px),820px);--mx:0;--my:0;position:relative;width:var(--S);height:var(--S);grid-area:1/1;touch-action:pan-y;user-select:none}
 .ring .line{position:absolute;inset:4%;border-radius:50%;border:1px solid rgba(241,236,247,.18);transform:translate(calc(var(--mx)*10px),calc(var(--my)*10px));transition:transform .6s}
 .ring .line::after{content:"";position:absolute;inset:-1px;border-radius:50%;box-shadow:0 0 90px rgba(242,193,78,.08) inset}
 .it{position:absolute;left:50%;top:50%;margin:0;padding:0;background:none;border:0;display:flex;align-items:center;gap:10px;will-change:transform,opacity;white-space:nowrap}
@@ -122,12 +122,12 @@ nav a:hover::after,nav a.on::after{transform:scaleX(1)}
 .panel .ex{font-family:var(--serif);font-size:clamp(1.05rem,1.8vw,1.55rem);line-height:1.25;margin:0;font-weight:350}
 .panel .vp{align-self:flex-start;background:none;border:0;padding:0 0 2px;border-bottom:2px solid var(--ac);font-weight:600;font-size:.95rem}
 .panel .vp:hover{letter-spacing:.02em}.panel .vp{transition:letter-spacing .3s}
-.ctrl{display:flex;gap:.6rem;align-items:center;justify-content:center;padding:.4rem 0 1rem}
+.ctrl{position:relative;z-index:6;display:flex;gap:.6rem;align-items:center;justify-content:center;padding:.4rem 0 1rem}
 .ctrl button{width:40px;height:40px;border-radius:50%;border:1px solid rgba(241,236,247,.3);background:none}
 .ctrl button:hover{background:var(--fg);color:var(--ink)}
 .ctrl span{min-width:9ch;text-align:center}
 /* project theme */
-[data-t=backpack]{--c:#8fd0b0}[data-t=soniq]{--c:#ff8a6b}[data-t=flowpilot]{--c:#6b9bff}[data-t=lumara]{--c:#f0b8c8}
+[data-t=backpack]{--c:#8fd0b0}[data-t=soniq]{--c:#ff8a6b}[data-t=flowpilot]{--c:#6b9bff}[data-t=lumara]{--c:#f0b8c8}[data-t=finance]{--c:#7fd6e0}
 .panel,.dt{--bg:#251c36;--fgp:#f1ecf7;--ac:#f2c14e}.dt{--bg:#17121f}
 [data-t=editing] .ex{text-decoration:line-through;text-decoration-color:var(--ac);opacity:.55;font-size:.85em}
 /* detail */
@@ -326,7 +326,7 @@ footer{background:var(--ink);color:var(--mut);padding:2rem 0;font-size:.9rem}
 <div class="rib" aria-hidden="true"><div><span>E-commerce</span><span>Advertising</span><span>Conversion copy</span><span>Copy editing</span><span>Product pages</span><span>Ad hooks</span><span>Landing pages</span><span>Marketplace listings</span><span>E-commerce</span><span>Advertising</span><span>Conversion copy</span><span>Copy editing</span><span>Product pages</span><span>Ad hooks</span><span>Landing pages</span><span>Marketplace listings</span></div></div>
 <section class="work" id="work" aria-labelledby="wh">
  <div class="stage"><div class="wrap">
-  <div class="whead"><h2 id="wh">Selected work</h2><p class="small" id="filters">Scroll, drag or click to explore the four projects.</p></div></div>
+  <div class="whead"><h2 id="wh">Selected work</h2><p class="small" id="filters">Scroll, drag or click to explore the five projects.</p></div></div>
   <div class="wrap sg" id="sg" style="width:100%">
    <div class="ring" id="ring" role="group" aria-label="Project orbit. Use arrow keys or buttons to change project."><div class="line"></div><div class="in2" id="i2"></div><div class="ticks" id="tk"></div><div class="arc" id="ar"></div><div class="mark"></div></div>
    <article class="panel" id="panel" aria-live="polite"></article>
@@ -342,7 +342,7 @@ footer{background:var(--ink);color:var(--mut);padding:2rem 0;font-size:.9rem}
   <div class="lead"><h2 id="hh">How I work</h2><p>Research first, edit last. Every line is written from confirmed facts and checked by hand, whether it started as my draft or came from a tool.</p></div>
   <div><div class="st5" id="st5"><div class="ln">Research the <span class="mk2">facts.</span><small>Product details, competitors, and how customers describe the problem. I write only from what is confirmed.</small></div><div class="ln">Find the customer <i class="g">insight.</i><small>Who is buying, what is stopping them, and what would make the decision easy.</small></div><div class="ln">Choose the <i class="g">angle.</i><small>One clear idea to lead with: the problem, the routine, or the payoff.</small></div><div class="ln">Draft in their <span class="mk2">words.</span><small>Headlines and body copy in the customer's language. Tools can speed up a first pass.</small></div><div class="ln"><i class="g">Edit</i> every line.<small>Facts, grammar, tone, and anything that does not earn its place, checked by hand.</small></div><div class="ln">Refine until it's <span class="mk2">ready.</span><small>A final read for clarity and consistency, so the copy is ready to publish.</small></div></div>
    <div class="flow" id="flow" aria-label="First draft, then human review, then final copy">
-    <div><h3>First draft</h3><p><s>Our innovative solution leverages cutting-edge synergies.</s></p></div>
+    <div><h3>First draft</h3><p>Our innovative solution leverages cutting-edge synergies.</p></div>
     <div><h3>Human review</h3><p>Every claim checked. <mark>Vague words</mark> cut.</p></div>
     <div><h3>Final copy</h3><p>Plain words. Checked facts. Yours to publish.</p></div>
    </div></div>
@@ -416,13 +416,21 @@ g:[{h:'Amazon',items:[['Title','Maison Lumara Minimalist Jewelry | Pendant, Lock
 {h:'Social and email concepts',items:[['Social concept','Single-image post: one piece, one line. "Less, but yours." Caption: Minimal jewellery for people who like things simple. Pendants, lockets, rings. CTA: Shop the collection.'],['Email concept','Subject: Simple pieces for every day. Preview: Pendants, lockets and rings from Maison Lumara. Body: Some days call for a statement. Most days don\'t. Maison Lumara is minimal jewellery for the days in between. CTA: Shop the collection.']]},
 {h:'Amazon vs Daraz',items:[['Amazon','Longer, search-aware title. Five bullets with capitalised lead-ins for shoppers comparing listings. Fuller, more formal description.'],['Daraz','Shorter title and short description for fast mobile scanning. Plain, friendly sentences and four simple points.'],['Same on both','One idea (minimal, understated, easy to wear) and no claim the brand hasn\'t confirmed.']]}],
 why:'Amazon and Daraz shoppers browse differently, so the structure and tone change while the brand idea stays fixed. Check each platform\'s current listing rules before publishing.',
-fmt:['Amazon title','Amazon bullets','Amazon description','Daraz title','Daraz short description','Daraz bullets','Daraz description','Social concept','Email concept']}
+fmt:['Amazon title','Amazon bullets','Amazon description','Daraz title','Daraz short description','Daraz bullets','Daraz description','Social concept','Email concept']},
+{id:'finance',name:'Finance Website Copy',cat:'Financial Services \u2022 Website Copy \u2022 Conversion Copy',lab:'Financial services',
+brief:'Financial-services website copy focused on personal lending, written for users researching personal loans.',
+obj:'Write structured financial website content that communicates complex information clearly while guiding users toward relevant next steps.',aud:'Adults researching personal loans and looking for clear information about their options, eligibility, application process and next steps.',
+prob:'Complex financial information has to be easy to understand before a user can decide on a next step.',
+strat:'Clear, trustworthy, benefit-led copy with minimal unnecessary jargon, organised so users are guided toward relevant next steps.',
+g:[{items:[['Overview','The work covers customer-focused messaging, website information architecture, benefit-led copy, calls to action, application guidance, eligibility information, FAQs and conversion-focused page structure.'],['Project content',['Homepage copy','Personal Loans page','How It Works section','Eligibility information','Application guidance','Benefits-focused messaging','Frequently Asked Questions','Calls to action','Website content structure','Conversion-focused messaging','Editing and content-quality review']],['Copy approach',['Clear','Professional','Trustworthy','User-focused','Easy to understand','Concise','Benefit-led','Conversion-oriented','Appropriate for financial-services communication','Minimal unnecessary jargon']]]}],
+why:'It shows structured financial website content that communicates complex information clearly while guiding users toward relevant next steps.',
+fmt:['Homepage copy','Personal Loans page','How It Works','Eligibility information','Application guidance','FAQs','CTAs']}
 ];
 const E=[
 {b:'Their are many reasons why you should of chosen us, we offers the best quality and service.',a:'Here\'s why customers choose us.',t:['Grammar','Conciseness','Tone'],n:'Fixed "their", "should of" and the comma splice, then cut an unsupported "best" claim.'},
 {b:'Unlock your fitness journey with our revolutionary program!',a:'Three 20-minute workouts a week. Start today.',t:['Clarity','Word choice','Flow'],n:'Replaced a slogan with the actual offer: how many, how long, when to start.'},
 {b:'Our amazing backpack is perfect for all your needs and is very good for everyday use!!',a:'Made for the things you carry every day.',t:['Brand consistency','Conciseness','Tone'],n:'Cut the filler and exclamation marks and kept one specific idea, in a calm, consistent voice.'}];
-const PM={backpack:['E-commerce copy','One bag for everything you carry every day.'],soniq:['Ad copy','Your commute has a soundtrack. Make it a good one.'],flowpilot:['Conversion copy','Stop chasing updates. Start finishing work.'],lumara:['Marketplace copy','Some days call for a statement. Most days don\'t.']};
+const PM={backpack:['E-commerce copy','One bag for everything you carry every day.'],soniq:['Ad copy','Your commute has a soundtrack. Make it a good one.'],flowpilot:['Conversion copy','Stop chasing updates. Start finishing work.'],lumara:['Marketplace copy','Some days call for a statement. Most days don\'t.'],finance:['Website copy','Clear information for people researching personal loans.']};
 const P=W.map(w=>({...w,t:w.id,f:'All',type:PM[w.id][0],tag:w.lab,blurb:w.brief,ex:PM[w.id][1]}));
 const F=[];
 /* ===== HELPERS ===== */
